@@ -1,0 +1,77 @@
+
+================ VALIDATION ================
+V1  Newtonian u err 3.08e-05, tau_w err 3.08e-05
+    Power-law u err 4.05e-05, tau_w err 1.88e-05
+    CY (mu0=muinf) vs Poiseuille u err 3.08e-05
+V2  Graetz: max |theta_m err| = 5.52e-04, max rel Nu err (zeta>1e-3) = 8.90e-03
+    Nu(end) = 3.6567   (exact 3.6568)
+V3  Const flux: max |Tm - exact| = 2.68e-04 K, Nu(end) = 4.3635 (exact 4.3636)
+V4  Power-law n=0.500 : Nu_inf = 4.7456  (analytical 4.7458, err 3.40e-05)
+V4  Power-law n=0.708 : Nu_inf = 4.5320  (analytical 4.5322, err 2.64e-05)
+V4  Power-law n=1.000 : Nu_inf = 4.3635  (analytical 4.3636, err 2.05e-05)
+V5  Adiabatic + dissipation (CY): dTm = 1.5173e-04 K, dp/(rho cp) = 1.5170e-04 K, rel err 1.57e-04
+V6  Nr=  31 Nx=  125 : rel err Nu = 9.885e-03, err theta_m = 1.253e-03, energy err = 5.10e-04
+V6  Nr=  61 Nx=  250 : rel err Nu = 4.867e-03, err theta_m = 6.307e-04, energy err = 1.28e-04
+V6  Nr= 121 Nx=  500 : rel err Nu = 2.428e-03, err theta_m = 3.187e-04, energy err = 3.21e-05
+V6  Nr= 241 Nx= 1000 : rel err Nu = 1.211e-03, err theta_m = 1.600e-04, energy err = 8.03e-06
+    observed order (Nu): [1.02 1 1]
+    observed order (Tm): [0.99 0.985 0.994]
+============================================
+cool     newtonian        T                Tm(L)=33.352  dp= 3.96 mmHg  [0.1s]
+cool     newtonian        q                Tm(L)=37.554  dp= 3.96 mmHg  [0.2s]
+cool     newtonian        coupled-counter  Tm(L)=32.556  dp= 3.96 mmHg  [0.5s]
+cool     newtonian        coupled-co       Tm(L)=32.932  dp= 3.96 mmHg  [0.5s]
+cool     carreau-yasuda   T                Tm(L)=33.329  dp= 4.34 mmHg  [0.7s]
+cool     carreau-yasuda   q                Tm(L)=37.554  dp= 4.34 mmHg  [0.8s]
+cool     carreau-yasuda   coupled-counter  Tm(L)=32.532  dp= 4.34 mmHg  [1.1s]
+cool     carreau-yasuda   coupled-co       Tm(L)=32.911  dp= 4.34 mmHg  [1.2s]
+rewarm   newtonian        T                Tm(L)=40.648  dp= 3.96 mmHg  [1.3s]
+rewarm   newtonian        q                Tm(L)=39.409  dp= 3.96 mmHg  [1.3s]
+rewarm   newtonian        coupled-counter  Tm(L)=38.746  dp= 3.96 mmHg  [1.5s]
+rewarm   newtonian        coupled-co       Tm(L)=38.477  dp= 3.96 mmHg  [1.6s]
+rewarm   carreau-yasuda   T                Tm(L)=40.671  dp= 4.34 mmHg  [1.7s]
+rewarm   carreau-yasuda   q                Tm(L)=39.409  dp= 4.34 mmHg  [1.7s]
+rewarm   carreau-yasuda   coupled-counter  Tm(L)=38.763  dp= 4.34 mmHg  [2.0s]
+rewarm   carreau-yasuda   coupled-co       Tm(L)=38.492  dp= 4.34 mmHg  [2.1s]
+(d) coolant sweep done [3.9s]
+(g) clot cases done [48.6s]
+(h) dissipation done [49.9s]
+(i) T-dependent viscosity done [347.9s]
+design map done [348.9s]
+      scenario                          case                       Tm_out_C    x_Tm40_mm    x_Tm37_mm    Tmax_local_C    Tmin_local_C    dp_mmHg    p_in_mmHg    p_ok     tau_w_max_Pa    tau_ok    HI_percent    Qheat_W    Nu_out    energy_err 
+    _____________    __________________________________________    ________    _________    _________    ____________    ____________    _______    _________    _____    ____________    ______    __________    _______    ______    ___________
+
+    {'cool'     }    {'T | newtonian'                         }     33.352       8.453       41.812             42              32        3.962      83.962      true        1.3206       true      4.9139e-05     165.02    3.6569     4.6213e-05
+    {'cool'     }    {'q | newtonian'                         }     37.554      67.481          NaN             42          35.494        3.962      83.962      true        1.3206       true      4.9139e-05     84.823     4.367     2.5351e-05
+    {'cool'     }    {'coupled-counter | newtonian'           }     32.556      17.099       56.169             42          29.958        3.962      83.962      true        1.3206       true      4.9139e-05     180.19    4.0068     3.7364e-05
+    {'cool'     }    {'coupled-co | newtonian'                }     32.932      15.618       53.708             42          30.802        3.962      83.962      true        1.3206       true      4.9139e-05     173.01    3.8914     4.0122e-05
+    {'cool'     }    {'T | carreau-yasuda'                    }     33.329      8.3668         41.4             42              32       4.3421      84.342      true        1.4473       true      6.1478e-05     165.46     3.691     4.3039e-05
+    {'cool'     }    {'q | carreau-yasuda'                    }     37.554      67.481          NaN             42          35.513       4.3421      84.342      true        1.4473       true      6.1478e-05     84.823    4.4089     2.2838e-05
+    {'cool'     }    {'coupled-counter | carreau-yasuda'      }     32.532      17.041       55.928             42          29.958       4.3421      84.342      true        1.4473       true      6.1478e-05     180.66    4.0462     3.4453e-05
+    {'cool'     }    {'coupled-co | carreau-yasuda'           }     32.911      15.561       53.457             42          30.804       4.3421      84.342      true        1.4473       true      6.1478e-05     173.43    3.9299     3.7121e-05
+    {'rewarm'   }    {'T | newtonian'                         }     40.648      117.34       41.812             42              32        3.962      83.962      true        1.3206       true      4.9139e-05    -165.02    3.6569    -4.6213e-05
+    {'rewarm'   }    {'q | newtonian'                         }     39.409         NaN       101.22         42.844              32        3.962      83.962      true        1.3206       true      4.9139e-05    -141.37     4.367    -2.5351e-05
+    {'rewarm'   }    {'coupled-counter | newtonian'           }     38.746         NaN       91.367         40.602              32        3.962      83.962      true        1.3206       true      4.9139e-05    -128.71    4.0068    -3.7364e-05
+    {'rewarm'   }    {'coupled-co | newtonian'                }     38.477         NaN       91.331         39.998              32        3.962      83.962      true        1.3206       true      4.9139e-05    -123.58    3.8914    -4.0122e-05
+    {'rewarm'   }    {'T | carreau-yasuda'                    }     40.671      116.23         41.4             42              32       4.3421      84.342      true        1.4473       true      6.1478e-05    -165.46     3.691    -4.3039e-05
+    {'rewarm'   }    {'q | carreau-yasuda'                    }     39.409         NaN       101.22         42.811              32       4.3421      84.342      true        1.4473       true      6.1478e-05    -141.37    4.4089    -2.2838e-05
+    {'rewarm'   }    {'coupled-counter | carreau-yasuda'      }     38.763         NaN       90.949         40.601              32       4.3421      84.342      true        1.4473       true      6.1478e-05    -129.04    4.0462    -3.4453e-05
+    {'rewarm'   }    {'coupled-co | carreau-yasuda'           }     38.492         NaN       90.871         39.997              32       4.3421      84.342      true        1.4473       true      6.1478e-05    -123.88    3.9299    -3.7121e-05
+    {'cool'     }    {'T | powerlaw'                          }     33.263      8.0839       40.142             42              32       3.6481      83.648      true        1.2159       true      4.0717e-05     166.71    3.7874     3.7798e-05
+    {'cool+clot'}    {'T | newtonian'                         }     33.487       8.453       41.812             42              32       6.0525      86.053      true        6.1093       true      0.00012827     162.43     3.673     4.4575e-05
+    {'cool+clot'}    {'T | carreau-yasuda'                    }     33.465      8.3668         41.4             42              32       6.4587      86.459      true        6.2262       true      0.00014388     162.85    3.7068     5.3976e-05
+    {'cool+clot'}    {'q | newtonian'                         }     37.554      67.481          NaN             42          35.494       6.0525      86.053      true        6.1093       true      0.00012827     84.823     4.367     2.5351e-05
+    {'cool+clot'}    {'q | carreau-yasuda'                    }     37.554      67.481          NaN             42          35.513       6.4587      86.459      true        6.2262       true      0.00014388     84.823    4.4085     2.2162e-05
+    {'cool+clot'}    {'coupled-counter | newtonian'           }     32.776      17.049       56.041             42          30.059       6.0525      86.053      true        6.1093       true      0.00012827     176.01    4.0293      3.597e-05
+    {'cool+clot'}    {'coupled-counter | carreau-yasuda'      }     32.754      16.991       55.793             42           30.06       6.4587      86.459      true        6.2262       true      0.00014388     176.42    4.0685      4.037e-05
+    {'cool+clot'}    {'coupled-co | newtonian'                }     33.121      15.618       53.728             42          30.873       6.0525      86.053      true        6.1093       true      0.00012827     169.43    3.9161     3.8759e-05
+    {'cool+clot'}    {'coupled-co | carreau-yasuda'           }     33.101      15.561       53.475             42          30.875       6.4587      86.459      true        6.2262       true      0.00014388      169.8    3.9544     4.3158e-05
+    {'cool'     }    {'T | CY + dissipation'                  }     33.329      8.3668         41.4             42              32       4.3421      84.342      true        1.4473       true      6.1478e-05     165.46    3.6911     4.3036e-05
+    {'cool'     }    {'T | CY + mu(T)'                        }     33.361      8.7411        42.53             42              32        4.643      84.643      true        1.5883       true      7.3042e-05      164.8    3.6769    -0.00019483
+    {'cool'     }    {'q | CY + mu(T)'                        }     37.554       67.48          NaN             42          35.499       4.1846      84.185      true        1.4645       true      5.6201e-05     84.823    4.3784     1.8314e-05
+    {'cool'     }    {'coupled-counter | CY + mu(T)'          }     32.569      17.182       56.436             42          29.964       4.6234      84.623      true        1.6379       true      7.2202e-05     179.95    4.0107    -3.3326e-06
+    {'cool'     }    {'coupled-co | CY + mu(T)'               }     32.942      15.706       53.997             42          30.808       4.6163      84.616      true        1.6166       true      7.1978e-05     172.82    3.9017    -1.1092e-05
+    {'cool+clot'}    {'coupled-counter | CY+mu(T)+diss (FULL)'}     32.789      17.132       56.315             42          30.065       6.8448      86.845      true        6.5908       true       0.0001657     175.75    4.0314    -6.4114e-06
+
+
+Total time 380.0 s. Results in D:\New folder\PYTHON\Cardioplegia Device\matlab\..\results

@@ -1,0 +1,20 @@
+# Archives (duplicates of the folders in the repo)
+*.zip
+*.7z
+
+# Large regenerable MATLAB outputs (re-create with run_everything)
+results/*.mat
+*.asv
+*.mex*
+slprj/
+
+# Personal / third-party files not meant for the repo
+WhatsApp Image*.jpeg
+Presentation*.pdf
+
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
